@@ -91,7 +91,7 @@ class TJSONParser{
 
 			if(key == '_hxcls'){
 				if(v.startsWith('Date@')) {
-					o = Date.fromTime(Std.parseInt(v.substr(5)));
+					o = Date.fromTime(Std.parseFloat(v.substr(5)));
 				} else {
 					var cls =Type.resolveClass(v);
 					if(cls==null) throw "Invalid class name - "+v;
